@@ -1,0 +1,959 @@
+/* Style umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #006b86;
+    color: #024a6b;
+    scroll-behavior: smooth;
+}
+
+/* Header dan navigasi */
+header {
+    background-color: #085877;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #050d0b;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #e4e7ea;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+#scrollTopBtn:hover {
+    background-color: #010403;
+}
+
+/* Beranda */
+/* Background gradien untuk beranda */
+/* Styling untuk Bagian Beranda dengan Gambar Background */
+#beranda {
+    background: url('Foto/Background\ Beranda.jpg') no-repeat center center fixed; /* Ganti dengan URL gambar Anda */
+    background-size: cover;
+    color: rgb(160, 151, 151);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay Gelap untuk Membuat Teks Lebih Mudah Dibaca */
+#beranda::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay hitam semi-transparan */
+    z-index: 1;
+}
+
+/* Konten Beranda */
+.beranda-content {
+    position: relative;
+    z-index: 2; /* Pastikan konten berada di atas overlay */
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(65, 57, 57, 0.1); /* Overlay putih semi-transparan pada konten */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animasi Fade In untuk Bagian Beranda */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi Teks Utama */
+.animate-text {
+    font-family: 'Montserrat', sans-serif; /* Font dari Google Fonts */
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #f9f9f9; /* Warna teks lembut */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    animation: slideIn 1s ease forwards;
+}
+
+/* Animasi Slide In untuk Teks */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Deskripsi dengan Warna yang Menarik */
+.description {
+    font-family: 'Roboto', sans-serif; /* Font untuk deskripsi */
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Tombol Kembali ke Atas */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10; /* Agar tombol tetap di atas */
+}
+
+#scrollTopBtn:hover {
+    background-color: #1abc9c;
+    transform: scale(1.1);
+}
+
+#scrollTopBtn i {
+    font-size: 1.5rem;
+}
+
+/* Animasi Hover untuk Tombol */
+#scrollTopBtn:hover i {
+    transform: scale(1.1);
+}
+
+/* Tambahkan Link Font Google di HTML */
+
+/* Tentang Saya */
+/* Styling untuk bagian "Tentang Saya" */
+/* Styling utama untuk bagian Tentang Saya */
+#tentang {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Garis ornamen */
+.ornamen-atas, .ornamen-bawah {
+    width: 100px;
+    height: 5px;
+    background-color: #ff5733;
+    margin: 20px auto;
+    border-radius: 50px;
+}
+
+/* Foto Profil */
+.foto-saya {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.foto-saya:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Informasi tentang diri */
+.info-saya ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.info-saya ul li {
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.info-saya ul li i {
+    margin-right: 10px;
+    color: #ff5733;
+}
+
+.info-saya ul li:hover {
+    background: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Deskripsi */
+.deskripsi {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deskripsi:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-links a i {
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Proyek */
+/* Bagian Proyek Saya */
+#proyek {
+    background-color: #f7f9fc; /* Warna latar belakang yang lembut */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Judul Proyek dengan animasi */
+#proyek h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Layout kotak proyek */
+.kotak-proyek {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Styling setiap item proyek */
+.item-proyek {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Efek hover pada setiap item */
+.item-proyek:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar Proyek */
+.item-proyek img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #3498db; /* Border bawah dengan warna biru */
+    transition: transform 0.3s ease;
+}
+
+.item-proyek img:hover {
+    transform: scale(1.1); /* Efek zoom gambar saat hover */
+}
+
+/* Judul Proyek */
+.item-proyek h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 20px 0;
+}
+
+/* Deskripsi Proyek */
+.item-proyek p {
+    color: #7f8c8d;
+    padding: 0 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Link Proyek dengan animasi */
+.link-proyek {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-proyek:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px); /* Efek sedikit mengangkat saat hover */
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    .kotak-proyek {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-proyek {
+        max-width: 90%;
+    }
+}
+
+
+/* Pengalaman Section */
+#pengalaman {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6dd5fa 100%);
+    color: white; /* Teks lebih kontras di atas background */
+    text-align: center;
+}
+
+#pengalaman h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.kotak-pengalaman {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.item-pengalaman {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparan ringan untuk efek elegan */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Efek blur transparansi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.item-pengalaman::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.item-pengalaman:hover::before {
+    opacity: 1;
+}
+
+.item-pengalaman:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.item-pengalaman img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    opacity: 0.9;
+}
+
+.item-pengalaman img:hover {
+    transform: scale(1.05);
+}
+
+.deskripsi-pengalaman h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    animation: slideIn 0.8s ease-out;
+}
+
+.deskripsi-pengalaman p {
+    font-family: 'Roboto', sans-serif;
+    color: #ecf0f1;
+    margin: 5px 0;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animasi */
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .kotak-pengalaman {
+        grid-template-columns: 1fr;
+    }
+
+    .item-pengalaman {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Riwayat Pendidikan */
+#riwayat-pendidikan {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#riwayat-pendidikan h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.konten-pendidikan {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.item-pendidikan {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.item-pendidikan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.item-pendidikan h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.item-pendidikan p {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Tanda pendidikan dengan ikon */
+.tanda-pendidikan {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#kontak h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.kontak-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE58;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .konten-pendidikan {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .item-pendidikan {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+    }
+}
+
+/* Sertifikat Section */
+#sertifikat {
+    padding: 50px 20px;
+    background-color: #f0f0f5;
+}
+
+#sertifikat h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sertifikat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sertifikat-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+}
+
+.sertifikat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sertifikat-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.sertifikat-item img:hover {
+    transform: scale(1.05);
+}
+
+.sertifikat-info {
+    padding: 10px;
+}
+
+.sertifikat-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.sertifikat-info p {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    margin: 5px 0;
+}
+
+.view-certificate-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-certificate-btn:hover {
+    background-color: #1abc9c;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .sertifikat-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sertifikat-item {
+        max-width: 90%;
+    }
+}
+
+
+#keahlian {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#keahlian h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.diagram-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.diagram {
+    position: relative;
+    width: 100%;
+}
+
+.keahlian {
+    margin: 15px 0;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2980b9;
+}
+
+.batang {
+    width: var(--persentase);
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: width 1s ease; /* Animasi saat lebar berubah */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.batang::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Warna putih transparan untuk efek */
+    border-radius: 5px;
+    animation: bounce 1s infinite; /* Animasi bounce */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Gerakan naik */
+    }
+}
+#kontak {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#kontak h2 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.kontak-container {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Warna WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animasi saat hover */
+    position: relative; /* Untuk efek bayangan */
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px); /* Naik sedikit saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+.whatsapp-button i {
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    font-size: 1.5em; /* Ukuran ikon */
+}
+
+/* Animasi ikon saat hover */
+.whatsapp-button:hover i {
+    animation: shake 0.5s ease-in-out; /* Animasi goyang */
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+
+
+
+#alamat {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#alamat h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    text-align: center; /* Rata tengah untuk peta */
+    margin-bottom: 20px; /* Jarak bawah peta */
+}
+
+#alamat p {
+    text-align: center; /* Rata tengah untuk teks */
+    color: #6f6969; /* Warna teks */
+}
+
+#alamat a {
+    color: #3498db; /* Warna tautan */
+    text-decoration: none; /* Tanpa garis bawah */
+}
+
+#alamat a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+/* Gaya untuk tombol Kembali ke Atas */
+
+  
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradasi warna */
+    color: white; /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+    padding: 20px; /* Ruang dalam */
+    font-family: 'Poppins', sans-serif; /* Gaya font */
+    font-size: 1rem; /* Ukuran font */
+}
+
+footer p {
+    margin: 0; /* Hilangkan margin */
+    line-height: 1.6; /* Jarak antar teks */
+}
+
+footer p a {
+    color: #f1c40f; /* Warna link jika ada */
+    text-decoration: none; /* Hilangkan garis bawah link */
+    transition: color 0.3s ease; /* Transisi warna link saat di-hover */
+}
+
+footer p a:hover {
+    color: #e67e22; /* Warna saat link di-hover */
+}
+
+/* Gaya untuk perangkat dengan lebar layar 600px atau lebih kecil (ponsel) */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  /* Gaya untuk perangkat dengan lebar layar lebih dari 600px (tablet dan desktop) */
+  @media (min-width: 601px) {
+    body {
+      font-size: 16px;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
